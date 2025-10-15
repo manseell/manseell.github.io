@@ -1,55 +1,55 @@
-/*  
-* Style by D3NN7
-* and Patrick Hlauke (https://codepen.io/patrickhlauke/pen/YaoBop)
-*/
+  .crt::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
 
-@font-face {
-    font-family: 'Noto Sans Display';
-    font-style: normal;
-    font-weight: 400;
-    src: url(./fonts/NotoSansDisplay-Regular.ttf);
+@keyframes flicker {
+  0% {
+  opacity: 0.27861;
   }
-  html { background: #111;
-         padding: 1em;
-         font-family: Noto Sans Display;
-         color: #eee;
-         font-size: 1em;
-         line-height: 1;
-         text-shadow: 0.06rem 0 0.06rem #ea36af, -0.125rem 0 0.06rem #75fa69;
-         letter-spacing: 0.125em;
-         animation-duration: 0.01s;
-         animation-name: textflicker;
-         animation-iteration-count: infinite;
-         animation-direction: alternate;
+  5% {
+  opacity: 0.34769;
   }
-  h1 { 
-    font-size: 5em; 
-    text-align: center;
+  10% {
+  opacity: 0.23604;
   }
+  15% {
+  opacity: 0.10626;
+  }
+  20% {
+  opacity: 0.18128;
+  }
+  25% {
+  opacity: 0.10626;
+  }
+  30% {
+  opacity: 0.18128;
+  }
+  35% {
+  opacity: 0.23604;
+  }
+}
 
-  a {
-    color: white;
-  }
-
-  @media screen and (min-width: 1200px) {
-    body {
-        margin-left: 20rem;
-        margin-right: 20rem;
-    }
-  }
-
-  @media screen and (min-width: 600px) {
-      body {
-          margin-left: 5em;
-          margin-right: 5em;
-      }
-  }
-  
-  @keyframes textflicker {
-    from {
-      text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
-    }
-    to {
-      text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
-    }
-  }
+.crt::after {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+  animation: flicker 0.15s infinite;
+}
