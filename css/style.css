@@ -5,8 +5,32 @@
   src: url(./fonts/NotoSansDisplay-Regular.ttf);
 }
 
+/*
 html { 
   background: #111;
+  padding: 1em;
+  font-family: Noto Sans Display;
+  color: #eee;
+  font-size: 1em;
+  line-height: 1;
+  text-shadow: 0.06rem 0 0.06rem #ea36af, -0.125rem 0 0.06rem #75fa69;
+  letter-spacing: 0.125em;
+  animation-duration: 0.01s;
+  animation-name: textflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+  /* Effetto CRT */
+  /*
+  position: relative;
+  overflow: hidden;
+  transform: perspective(800px) scale(1.02) rotateX(1deg) rotateY(1deg);
+  box-shadow: inset 0 0 80px rgba(0,0,0,0.8);
+}*/
+
+html { 
+  background: #111 url("./images/sfondo-crt.jpg") no-repeat center center fixed;
+  background-size: cover; /* adatta l’immagine allo schermo */
   padding: 1em;
   font-family: Noto Sans Display;
   color: #eee;
@@ -25,6 +49,7 @@ html {
   transform: perspective(800px) scale(1.02) rotateX(1deg) rotateY(1deg);
   box-shadow: inset 0 0 80px rgba(0,0,0,0.8);
 }
+
 
 html::before {
   content: "";
