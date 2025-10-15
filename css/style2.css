@@ -1,0 +1,91 @@
+@font-face {
+  font-family: 'Noto Sans Display';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./fonts/NotoSansDisplay-Regular.ttf);
+}
+
+html {
+  background: #111;
+  font-family: 'Noto Sans Display', sans-serif;
+  color: #eee;
+  font-size: 1em;
+  line-height: 1;
+  letter-spacing: 0.125em;
+}
+
+/* Contenitore CRT */
+.crt {
+  position: relative;
+  margin: 2em auto;
+  padding: 2em;
+  max-width: 800px;
+  background: #111;
+  border-radius: 2em; /* angoli arrotondati */
+  box-shadow: inset 0 0 80px #000, 0 0 40px #000;
+  transform: perspective(1000px) scale(1.02) rotateX(1deg) rotateY(-1deg);
+  overflow: hidden;
+  text-shadow: 0.06rem 0 0.06rem #ea36af, -0.125rem 0 0.06rem #75fa69;
+  animation: textflicker 0.01s infinite alternate;
+}
+
+h1 { 
+  font-size: 5em; 
+  text-align: center;
+}
+
+a {
+  color: white;
+}
+
+/* Effetto scanlines */
+.crt::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.05) 0px,
+    rgba(255,255,255,0.05) 1px,
+    transparent 2px,
+    transparent 3px
+  );
+  border-radius: inherit;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* Vignettatura */
+.crt::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 150px rgba(0,0,0,0.8);
+  pointer-events: none;
+}
+
+/* Flicker testo */
+@keyframes textflicker {
+  from {
+    text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+  }
+  to {
+    text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+  }
+}
+
+/* Responsive margins */
+@media screen and (min-width: 1200px) {
+  body {
+    margin-left: 20rem;
+    margin-right: 20rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    margin-left: 5em;
+    margin-right: 5em;
+  }
+}
