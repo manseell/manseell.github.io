@@ -1,8 +1,8 @@
 @font-face {
-    font-family: 'Noto Sans Display';
+    font-family: 'Byte Bounce';
     font-style: normal;
     font-weight: 400;
-    src: url(./fonts/NotoSansDisplay-Regular.ttf);
+    src: url('../fonts/ByteBounce.ttf');
   }
   
   html { 
