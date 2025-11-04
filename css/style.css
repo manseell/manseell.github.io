@@ -76,12 +76,12 @@
   }
 
   footer img {
-  position: fixed;
-  bottom: -5em; /* compensa il padding */
-  right: -5em;
-  max-width: 350px;
-  z-index: 2001;
-}
+    position: fixed;
+    bottom: -5em; /* compensa il padding */
+    right: -5em;
+    max-width: 350px;
+    z-index: 2001;
+  }
 
 
 
@@ -89,6 +89,7 @@
   body {
     position: relative;
     z-index: 10;
+    min-height: 100vh;
     transform: perspective(1000px) rotateX(0deg);
     transform-style: preserve-3d;
   }
@@ -143,5 +144,10 @@
     100% {
       transform: translateY(3px);
     }
+  }
+
+  .carriera{
+    margin: 0 auto;
+    font-size: 25px; 
   }
   
