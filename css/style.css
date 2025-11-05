@@ -12,9 +12,9 @@
     color: #eee;
     font-size: 1em;
     line-height: 1;
-    text-shadow: 0.06rem 0 0.06rem #ea36af, -0.125rem 0 0.06rem #75fa69;
+    text-shadow: 0.03rem 0 0.03rem #ea36af, -0.05rem 0 0.03rem #75fa69;
     letter-spacing: 0.125em;
-    animation-duration: 0.01s;
+    animation-duration: 0.7s;
     animation-name: textflicker;
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -49,7 +49,7 @@
     background-image: url('../images/sfondoprova.png');
     background-size: cover;
     background-position: top center;
-    background-repeat: no-repeat; /* assicurati che sia no-repeat */
+    background-repeat: no-repeat;
     opacity: 0.5;
     z-index: -1;
     filter: brightness(0.9) contrast(1.2);
@@ -106,11 +106,17 @@
 
   a {
     color: white;
+    transform: scale(1, 1.3);
   }
 
   p {
     margin-bottom: 1.5em;
     font-size: 150%;
+    transform: scale(1, 1.3);
+  }
+
+  span{
+    transform: scale(1, 1.3);
   }
 
 
@@ -147,7 +153,11 @@
   }
 
   .carriera{
+    display: flex;
+    align-items: center;
     margin: 0 auto;
     font-size: 25px; 
   }
+
+
   
